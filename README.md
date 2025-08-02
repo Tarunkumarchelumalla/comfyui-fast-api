@@ -28,7 +28,7 @@ This project is a minimal FastAPI wrapper for [ComfyUI](https://github.com/comfy
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/comfyui-fastapi-api.git
+git clone https://github.com/Tarunkumarchelumalla/comfyui-fast-api/tree/main
 cd comfyui-fastapi-api
 ```
 
@@ -121,3 +121,4 @@ MIT License © 2025 Tarun
 ## 🙌 Acknowledgements
 
 - Thanks to [ComfyUI](https://github.com/comfyanonymous/ComfyUI) for the node-based diffusion backend.
+
