@@ -1,3 +1,4 @@
+
 # 🧠 FastAPI × ComfyUI — Image Generator API
 
 This project is a minimal FastAPI wrapper for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), enabling users to generate 512×512 AI images using a text prompt through a simple API endpoint.
@@ -29,44 +30,56 @@ This project is a minimal FastAPI wrapper for [ComfyUI](https://github.com/comfy
 ```bash
 git clone https://github.com/your-username/comfyui-fastapi-api.git
 cd comfyui-fastapi-api
-2. Create virtual environment
-bash
-Copy
-Edit
+```
+
+### 2. Create virtual environment
+
+```bash
 python -m venv venv
 source venv/bin/activate       # For Windows: venv\Scripts\activate
-3. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Run the FastAPI server
-bash
-Copy
-Edit
-uvicorn main:app --reload
-🎯 Usage
-Endpoint
-POST /api/generate?prompt=<your_prompt>
+```
 
-Example
-bash
-Copy
-Edit
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the FastAPI server
+
+```bash
+uvicorn main:app --reload
+```
+
+---
+
+## 🎯 Usage
+
+### Endpoint
+
+`POST /api/generate?prompt=<your_prompt>`
+
+#### Example
+
+```bash
 curl -X POST "http://127.0.0.1:8000/api/generate?prompt=a futuristic cyberpunk street with dog"
-Response
-json
-Copy
-Edit
+```
+
+#### Response
+
+```json
 {
   "base64_image": "iVBORw0KGgoAAAANSUhEUgAA..."
 }
+```
+
 You can decode this base64 string into an image using any viewer or frontend app.
 
-🧠 Project Structure
-graphql
-Copy
-Edit
+---
+
+## 🧠 Project Structure
+
+```
 .
 ├── main.py                # FastAPI app with /api/generate route
 ├── utils/
@@ -74,12 +87,37 @@ Edit
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-🧾 .gitignore
-gitignore
-Copy
-Edit
+```
+
+---
+
+## 🧾 .gitignore
+
+```gitignore
 venv/
 __pycache__/
 *.pyc
 output/
 .env
+```
+
+---
+
+## 🧪 TODO
+
+- [ ] Add async polling timeout fallback
+- [ ] Improve error messages
+- [ ] Add support for output metadata (e.g., seed, time taken)
+- [ ] Dockerize the setup
+
+---
+
+## ⚖️ License
+
+MIT License © 2025 Tarun
+
+---
+
+## 🙌 Acknowledgements
+
+- Thanks to [ComfyUI](https://github.com/comfyanonymous/ComfyUI) for the node-based diffusion backend.
